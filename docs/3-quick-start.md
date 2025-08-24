@@ -9,7 +9,7 @@ title: Quick Start Guide
 2. Go to the Plugins ribbon.
 3. Click any of the “Click to Build” buttons (Shape Builder, Model Placer, and Structure Builder) to open the UI panel.
 
-![Click To Build in plugins ribbon](/img/verify-plugin.png)
+![Click To Build in plugins ribbon](/img/verify-plugin2.png)
 
 ## Find the UI 🪟
 

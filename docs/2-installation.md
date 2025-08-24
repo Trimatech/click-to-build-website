@@ -13,7 +13,7 @@ title: Installation
 
 -   Open Roblox Studio and check the Plugins ribbon for “Click to Build”.
 
-![Verify plugin in Plugins ribbon](/img/verify-plugin.png)
+![Verify plugin in Plugins ribbon](/img/verify-plugin2.png)
 
 ## If plugin is not visible 🙈
 
