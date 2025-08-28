@@ -9,6 +9,13 @@ This page lists notable changes across releases. Use it to track new features, i
 
 -   EditableMesh as a result from Shape Builder and Puncher
 
+## 1.1.0
+
+-   Grid Mode — Camera: Lock the grid to a plane in front of the camera with configurable distance and axis (X/Y/Z/None). Improves free‑space drawing without relying on a surface.
+-   Align grid to current edge: Rotate and position the grid to the active edge direction for precise edge‑aligned placement in both Shape Builder and Model Builder.
+
+-   Demos: [Camera grid mode](https://www.youtube.com/watch?v=9_SBb4Cul5Q), [Align grid to edge (Model Builder)](https://www.youtube.com/watch?v=oiYGyTu9LJc), [Align grid to edge (Shape Builder)](https://www.youtube.com/watch?v=nvRp8FfR1eQ)
+
 ## 1.0.9
 
 -   Punch feature: Subtract shapes from parts (Shape Builder)

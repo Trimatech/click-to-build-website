@@ -140,12 +140,73 @@ What gets copied to the new Shape (when a template is set):
 
 ![Grid Settings](/img/common/grid-settings.png)
 
+#### Grid Mode
+
+-   Default: Is on surface that mouse points on
+
+    ![Grid Mode — Default](/img/common/grid-mode-default.gif)
+
+-   Rotated to part: Aligns to the hit surface/part orientation.
+
+    ![Grid Mode — Rotated to part](/img/common/grid-mode-rotatedToPart.gif)
+
+-   World grid: Uses global position (0,0,0) instead of hit surface/part position
+
+    ![Grid Mode — World](/img/common/grid-mode-world.gif)
+
+-   Camera grid: Grid is locked to the position of camera with offset
+
+        -   Camera Distance: Offset of the plane from the camera (studs).
+        -   Camera Workplane Axis: Lock the plane to None, X, Y or Z.
+
+            ![Grid Mode — Camera](/img/common/grid-mode-camera.gif)
+
+#### Other settings
+
 -   Grid Size: Spacing used for grid snapping.
--   Quick Grid: One-tap presets 10, 5, 1, and the minimum size.
--   Grid rotated to part: Rotate the grid to the current surface/part orientation.(Note: Disable `Use world grid` to make this work properly)
+-   Quick Grid: One‑tap presets 10, 5, 1, and the minimum size.
 -   Snap to part: Snap points to nearby part vertices/edges.
--   Use world grid: Use global axes for the grid instead of rotating to surfaces.
+-   Align grid to current edge: Rotate and position the grid to the current edge on the work surface.
+
+    ![Grid Mode — Align to edge](/img/common/grid-align-current-edge.gif)
+
 -   Tip: Press V while building to lock/unlock the current plane.
+
+#### Demo of using Grid Mode "Camera" in Shape Builder
+
+<iframe
+    width="80%"
+    height="420"
+    src="https://www.youtube.com/embed/9_SBb4Cul5Q"
+    title="Grid usage demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    > </iframe>
+    
+#### Demo of using "Align grid to current edge" in Model Builder
+
+<iframe
+    width="80%"
+    height="420"
+    src="https://www.youtube.com/embed/oiYGyTu9LJc"
+    title="Grid usage demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    > </iframe>
+
+#### Demo of using "Align grid to current edge" in Shape Builder
+
+<iframe
+    width="80%"
+    height="420"
+    src="https://www.youtube.com/embed/nvRp8FfR1eQ"
+    title="Grid usage demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    > </iframe>
 
 #### Demo for using the Grid
 
