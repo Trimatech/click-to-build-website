@@ -9,12 +9,21 @@ This page lists notable changes across releases. Use it to track new features, i
 
 -   EditableMesh as a result from Shape Builder and Puncher
 
+## 1.2.0
+
+-   Model Placer — Template mode enhancements:
+
+    -   Start/End Segment %: define start/end caps and extendable/repeating middle segment
+    -   Spacing applies in None/Copy placement modes
+    -   Template preview is interactive (zoom and rotate)
+    -   Persist template specific settings to template as attributes.
+
 ## 1.1.0
 
 -   Grid Mode — Camera: Lock the grid to a plane in front of the camera with configurable distance and axis (X/Y/Z/None). Improves free‑space drawing without relying on a surface.
--   Align grid to current edge: Rotate and position the grid to the active edge direction for precise edge‑aligned placement in both Shape Builder and Model Builder.
+-   Align grid to current edge: Rotate and position the grid to the active edge direction for precise edge‑aligned placement in both Shape Builder and Model Placer.
 
--   Demos: [Camera grid mode](https://www.youtube.com/watch?v=9_SBb4Cul5Q), [Align grid to edge (Model Builder)](https://www.youtube.com/watch?v=oiYGyTu9LJc), [Align grid to edge (Shape Builder)](https://www.youtube.com/watch?v=nvRp8FfR1eQ)
+-   Demos: [Camera grid mode](https://www.youtube.com/watch?v=9_SBb4Cul5Q), [Align grid to edge (Model Placer)](https://www.youtube.com/watch?v=oiYGyTu9LJc), [Align grid to edge (Shape Builder)](https://www.youtube.com/watch?v=nvRp8FfR1eQ)
 
 ## 1.0.9
 

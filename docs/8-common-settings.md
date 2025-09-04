@@ -184,7 +184,7 @@ What gets copied to the new Shape (when a template is set):
     allowfullscreen
     > </iframe>
     
-#### Demo of using "Align grid to current edge" in Model Builder
+#### Demo of using "Align grid to current edge" in Model Placer
 
 <iframe
     width="80%"
