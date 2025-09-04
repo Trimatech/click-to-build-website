@@ -92,17 +92,25 @@ Choose how the plugin places your model as you add points:
 
 ![Model Template Settings](/img/model/model-template-settings.png)
 
-When Template mode is active:
+### Template mode
 
--   Start/End Segment % split your template along its primary axis into 1–3 segments:
-    -   0/0 (default): single segment is used as‑is.
-    -   Only Start or only End is set: two segments (a cap at one side and the middle).
-    -   Both Start and End are set: three segments (start cap, middle, end cap).
--   The Start segment's parts are placed at each point start; the middle segment contains extendable and/or repeating parts between points; the End segment's parts finish the run.
--   Valid range is 0–49% for both. The preview shows a color legend (start/end: blue; middle: green) and a studs readout for the selected percentages.
--   Extend to mouse position: Controls how the template extends between points:
-    -   Enabled: The template extends exactly to your mouse position, allowing for any length.
-    -   Disabled: The template snaps to fixed segment widths based on your model size, creating consistent repeating patterns. Good if there are repeating parts that need to be Magic Merged together
+#### How it behaves
+
+-   Uses Start/End Segment % to split the template into start cap, middle span, and end cap along the primary axis.
+-   At each point, the start cap is placed; between points, the middle span repeats or extends; the end cap closes the run when configured.
+-   Preview shows a color legend (start/end: blue; middle: green) and a studs readout for the selected percentages.
+
+#### Start/End segments
+
+-   0/0 (default): single segment is used as‑is (no caps).
+-   Only Start or only End is set: two segments (a cap at one side and the middle).
+-   Both Start and End are set: three segments (start cap, middle, end cap).
+-   Valid range is 0–49% for both.
+
+#### Extend to mouse position
+
+-   Enabled: The template extends exactly to your mouse position, allowing for any length.
+-   Disabled: The template snaps to fixed segment widths based on your model size — ideal when repeating parts must line up for Magic Merge.
 
 Using model with start segment defined
 
@@ -114,7 +122,27 @@ Using similar model without start segment (0%)
 
 Spacing:
 
--   Spacing (studs) applies in None and Copy placement modes. It leaves that amount of space between placed templates. In Template mode, spacing is governed by the segmenting logic.
+-   Spacing (studs) applies in None and Copy placement modes. In Template mode, spacing is governed by the segmenting/segment widths.
+
+### Copy mode
+
+#### How it behaves
+
+-   Places multiple models in one click between the last point and your current mouse position.
+-   With Spacing, each model after the first is placed after a full pre-gap; all gaps are equal (including first → second).
+-   With Extend to mouse position enabled, the run ends exactly at your mouse position.
+
+#### Extend to mouse position
+
+-   Enabled: the next point recorded is your exact mouse position (not the clamped repeat end). This lets you finish runs precisely at arbitrary lengths.
+-   Disabled: the path advances by whole model lengths (plus spacing) from the last point.
+
+#### Spacing with Copy
+
+-   Spacing is applied as a full pre-gap before each placed model (except the very first), so the first‑to‑second gap matches all other gaps.
+-   This also applies in the live preview (after your first point, only the repeated preview copies are rendered, so the preview spacing matches the final result).
+
+![Model with spacingt](/img/model/model-placer-spacing.gif)
 
 ## Settings persistence
 
