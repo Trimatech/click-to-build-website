@@ -261,6 +261,28 @@ For last point you will defined slope, it can be inwards or outwards. So you can
 
 ![Shape Pyramid](/img/shapes/shape-platform-custom.gif)
 
+### Shape - Pill
+
+Create a rounded capsule-like block.
+
+![Shape Pill Settings](/img/shapes/pill-settings.png)
+
+#### Draw Modes
+
+##### 4 - points (Side-Side-Height)
+
+Place two points for width, one for depth, then height.
+
+##### 3 - points (Center to Corner)
+
+Fast placement from center; define the footprint by dragging to a corner, then set height.
+
+##### 3 - points (Square Center to Side)
+
+Constrained square footprint from center to side direction; width and depth are locked to be equal for perfectly square capsules.
+
+![Shape Pill](/img/shapes/shape-pill.gif)
+
 ### Shape - Sector
 
 ![Shape Sector Settings](/img/shapes/sector-settings.png)
