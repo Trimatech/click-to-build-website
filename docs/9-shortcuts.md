@@ -9,6 +9,7 @@ title: Keyboard Shortcuts
 -   Start/Stop Shape Builder: Shift+T
 -   Lock current plane: Shift+V
 -   Disable grid snap: Hold Shift
+-   Precision while disabled: Hold Shift+Option (rounds movement to 0.1)
 -   Close loop for polygon: Space
 -   Polygon Edit Mode: Shift+G
 

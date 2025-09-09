@@ -3,6 +3,13 @@ id: installation
 title: Installation
 ---
 
+<div align="center">
+  <a class="button button--primary button--lg" href="https://create.roblox.com/store/asset/125786968176382/Click-To-Build-Plugin" target="_blank" rel="noopener noreferrer">
+    Get on Roblox Store
+  </a>
+  
+</div>
+
 ## Install from Roblox Store 🛍️
 
 1. Open the Creator Store plugin page: [Click To Build](https://create.roblox.com/store/asset/125786968176382/Click-To-Build-Plugin)

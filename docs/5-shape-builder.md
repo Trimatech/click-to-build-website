@@ -25,7 +25,7 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 
 ## Supported shapes
 
-![Available Shapes](/img/shape-list.png)
+![Available Shapes](/img/shapes/supported-shapes.png)
 
 ### Shape - Block
 
@@ -40,6 +40,12 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 ##### 3 - points (Center to Corner)
 
 Good when working with Grid, especially when creating many blocks and minimizing clicks.
+
+##### 3 - points (Square Center to Side)
+
+Constrained square variant of the 3‑point mode. Set the center, then a side direction; width and depth are locked to be equal (square footprint). Great for fast, perfectly square floors/walls while staying aligned to the work plane and grid.
+
+![Shape Builder Square](/img/shapes/shape-builder-square.gif)
 
 ### Shape - Cylinder
 
@@ -230,6 +236,30 @@ If you need a wedge on its side.
 ### Shape - Corner
 
 ![Shape Corner Wedge](/img/shapes/shape-corner-wedge.gif)
+
+### Shape - Pyramid
+
+Build a pyramid made of four CornerWedge parts that meet at a shared apex.
+
+![Shape Pyramid](/img/shapes/shape-pyramid.gif)
+
+### Shape - Platform
+
+![Shape Platform Settings](/img/shapes/platform-settings.png)
+
+Create frustum of a pyramid, in simple terms - a platform.
+
+#### 4 points (45°)
+
+Predefined slope, for quick platform
+
+![Shape Pyramid](/img/shapes/shape-platform-45.gif)
+
+#### 5 points (custom slope)
+
+For last point you will defined slope, it can be inwards or outwards. So you can create upside down platform.
+
+![Shape Pyramid](/img/shapes/shape-platform-custom.gif)
 
 ### Shape - Sector
 

@@ -8,6 +8,16 @@ This page lists notable changes across releases. Use it to track new features, i
 ## Unreleased 🧪
 
 -   EditableMesh as a result from Shape Builder and Puncher
+-   Rounded Block
+
+## 1.3.0
+
+-   Grid Snap: while holding Shift to disable snapping, hold Shift+Option to apply precision rounding to 0.1 on movements/placements.
+-   Block: new draw mode — 3 Points (Square Center to Side). Constrains width and depth to be equal when using the 3‑point rectangle flow.
+-   Added Pyramid shape.
+-   Added Pill shape.
+-   Added Platform shape.
+-   Small-scale building improvements: better preview sizes, snap indicators scale with zoom.
 
 ## 1.2.0
 
