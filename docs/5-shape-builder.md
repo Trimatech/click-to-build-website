@@ -29,21 +29,21 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 
 ### Shape - Block
 
-![Shape Block Settings](/img/shapes/block-settings.png)
+![Shape Block Settings](/img/shapes/draw-modes-rect.png)
 
 #### Draw Modes
 
-##### 4 - points (Side-Side-Height)
+##### Width → Depth → Height
 
 ![Shape Block](/img/shapes/shape-block.gif)
 
-##### 3 - points (Center to Corner)
+##### Center → Corner
 
 Good when working with Grid, especially when creating many blocks and minimizing clicks.
 
-##### 3 - points (Square Center to Side)
+##### Square: Center → Side
 
-Constrained square variant of the 3‑point mode. Set the center, then a side direction; width and depth are locked to be equal (square footprint). Great for fast, perfectly square floors/walls while staying aligned to the work plane and grid.
+Constrained square variant of the center-based mode. Click the center, then a side direction; width and depth are locked to be equal (square footprint). Great for fast, perfectly square floors/walls while staying aligned to the work plane and grid.
 
 ![Shape Builder Square](/img/shapes/shape-builder-square.gif)
 
@@ -241,6 +241,16 @@ If you need a wedge on its side.
 
 Build a pyramid made of four CornerWedge parts that meet at a shared apex.
 
+![Shape Block Settings](/img/shapes/draw-modes-rect.png)
+
+![Shape Pyramid](/img/shapes/shape-pyramid.gif)
+
+#### Draw Modes
+
+-   Width → Depth → Height
+-   Center → Corner
+-   Square: Center → Side
+
 ![Shape Pyramid](/img/shapes/shape-pyramid.gif)
 
 ### Shape - Platform
@@ -265,23 +275,55 @@ For last point you will defined slope, it can be inwards or outwards. So you can
 
 Create a rounded capsule-like block.
 
-![Shape Pill Settings](/img/shapes/pill-settings.png)
+![Shape Pill Settings](/img/shapes/draw-modes-rect.png)
 
 #### Draw Modes
 
-##### 4 - points (Side-Side-Height)
-
-Place two points for width, one for depth, then height.
-
-##### 3 - points (Center to Corner)
-
-Fast placement from center; define the footprint by dragging to a corner, then set height.
-
-##### 3 - points (Square Center to Side)
-
-Constrained square footprint from center to side direction; width and depth are locked to be equal for perfectly square capsules.
+-   Width → Depth → Height
+-   Center → Corner
+-   Square: Center → Side
 
 ![Shape Pill](/img/shapes/shape-pill.gif)
+
+### Shape - Roundbox
+
+Create a fully rounded rectangular block (rounded edges and corners). Great for soft, polished shapes and filleted blocks.
+
+![Shape Pill Settings](/img/shapes/draw-modes-rounded.png)
+
+#### Draw Modes
+
+-   Width → Depth → Height
+-   Center → Corner
+-   Square: Center → Side
+
+![Shape Pill](/img/shapes/shape-roundbox.gif)
+
+#### Radius Modes
+
+-   Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
+-   Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
+
+Works with Punch mode to cut rounded openings.
+
+### Shape - Quadbox
+
+A performance-friendly rounded rectangle variant. Produces straight top/bottom faces with rounded vertical corners (no corner spheres or top/bottom edge cylinders), ideal when you want rounded sides at lower part counts.
+
+![Shape Pill Settings](/img/shapes/draw-modes-rounded.png)
+
+![Shape Pill](/img/shapes/shape-quadbox.gif)
+
+#### Draw Modes
+
+-   Width → Depth → Height
+-   Center → Corner
+-   Square: Center → Side
+
+#### Radius Modes
+
+-   Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
+-   Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
 
 ### Shape - Sector
 
