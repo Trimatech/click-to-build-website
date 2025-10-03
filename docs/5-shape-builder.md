@@ -47,6 +47,26 @@ Constrained square variant of the center-based mode. Click the center, then a si
 
 ![Shape Builder Square](/img/shapes/shape-builder-square.gif)
 
+### Shape - Plane
+
+Create a rectangular plane aligned to the current work plane. Useful for floors, walls, and reference surfaces.
+
+![Shape Plane Settings](/img/shapes/plane-settings.png)
+
+#### Modes
+
+-   Height is fixed: Locks height to a numeric value while you place width and depth. The fixed height is centered around the grid so adjustments feel intuitive as you move the mouse.
+-   Depth is fixed: Locks depth to a numeric value while you place width and height.
+
+#### Settings
+
+-   Plane Mode: Choose Fixed Height or Fixed Depth
+-   Fixed Size: Numeric value for the fixed dimension (studs)
+
+The Plane shape supports Punch mode to cut thin openings or surface slices out of other parts.
+
+Set Fixed Size to "-"(0.0001) while using Punch Mode to split parts exactly along the plane (precise slicing).
+
 ### Shape - Cylinder
 
 ![Shape Cylinder Settings](/img/shapes/cylinder-settings.png)

@@ -9,6 +9,15 @@ This page lists notable changes across releases. Use it to track new features, i
 
 -   EditableMesh as a result from Shape Builder and Puncher
 
+## 1.5.0
+
+-   New shape: Plane (Fixed Height / Fixed Depth)
+-   Add automatic start/end cap cutters for Model Placer template
+-   Magic Merge wedge improvemnt, extra cap is filed with corner wedge
+-   Fixes to Grid Mode: World Grid
+-   Fixes to Punch Mode
+-   Fixes to Snap Points
+
 ## 1.4.0
 
 -   Shape Builder: Added Roundbox (fully rounded rectangle) with two radius modes:
