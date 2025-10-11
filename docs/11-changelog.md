@@ -9,6 +9,8 @@ This page lists notable changes across releases. Use it to track new features, i
 
 -   EditableMesh as a result from Shape Builder and Puncher
 
+-   Shape Builder: Adding of arched corner (half-arch corner)
+
 ## 1.5.0
 
 -   New shape: Plane (Fixed Height / Fixed Depth)
