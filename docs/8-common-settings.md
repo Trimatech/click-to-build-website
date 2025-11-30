@@ -239,6 +239,8 @@ What gets copied to the new Shape (when a template is set):
 -   Point Size: Visual size of control points while editing.
 -   Show info box: Toggle on‑screen hints and shortcuts.
 -   Show distances UI: Display live distances between points while placing.
+-   Output Type: Decide whether generated geometry is grouped into a `Folder` or `Model`.
+-   Output To: Route results to `Workspace` (default) or the first selected folder/model in the Explorer. If you select a part, the plugin climbs up the hierarchy until it finds a folder/model; if nothing valid is selected it safely falls back to `Workspace`.
 -   Enable logging: Print internal events to the console for debugging.
 -   UI Scale: Scale the plugin UI (useful for high‑DPI or small screens).
 -   Reset Settings: Revert all settings to defaults and end active building.

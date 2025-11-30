@@ -7,6 +7,7 @@ This page lists notable changes across releases. Use it to track new features, i
 
 ## Unreleased 🧪
 
+-   Advanced Settings: Added **Output To** so builders can direct generated folders/models to `Workspace` or the first selected folder/model (with automatic ancestor lookup and Workspace fallback).
 -   EditableMesh as a result from Shape Builder and Puncher
 
 -   Shape Builder: Adding of arched corner (half-arch corner)
