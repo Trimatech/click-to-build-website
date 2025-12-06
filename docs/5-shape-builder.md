@@ -9,9 +9,10 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 
 ## When to use 🧩
 
--   Blocking out levels and paths
--   Creating walls, floors, ramps, wedges, cylinders, sectors, and spheres
--   Making clean, repeatable geometry with consistent dimensions
+- Blocking out levels and paths
+- Creating walls, floors, ramps, wedges, cylinders, sectors, and spheres
+- Drawing smooth curves for roads, rails, pipes, and organic shapes
+- Making clean, repeatable geometry with consistent dimensions
 
 ## Workflow 🛠️
 
@@ -55,13 +56,13 @@ Create a rectangular plane aligned to the current work plane. Useful for floors,
 
 #### Modes
 
--   Height is fixed: Locks height to a numeric value while you place width and depth. The fixed height is centered around the grid so adjustments feel intuitive as you move the mouse.
--   Depth is fixed: Locks depth to a numeric value while you place width and height.
+- Height is fixed: Locks height to a numeric value while you place width and depth. The fixed height is centered around the grid so adjustments feel intuitive as you move the mouse.
+- Depth is fixed: Locks depth to a numeric value while you place width and height.
 
 #### Settings
 
--   Plane Mode: Choose Fixed Height or Fixed Depth
--   Fixed Size: Numeric value for the fixed dimension (studs)
+- Plane Mode: Choose Fixed Height or Fixed Depth
+- Fixed Size: Numeric value for the fixed dimension (studs)
 
 The Plane shape supports Punch mode to cut thin openings or surface slices out of other parts.
 
@@ -129,21 +130,21 @@ Set as many points for your polygon as you like. You can undo or go to "Edit Mod
 
 You can set different triangulation algorithms. The default is fine in most cases. If a polygon is not drawn correctly, try changing the algorithm:
 
--   Ear-clipping (Default)
--   Delaunay (Better Triangles - does not create long and narrow wedges)
--   Simple (Non‑concave — not needed in most cases; does not work with concave polygons)
--   Grid Based (Experimental)
+- Ear-clipping (Default)
+- Delaunay (Better Triangles - does not create long and narrow wedges)
+- Simple (Non‑concave — not needed in most cases; does not work with concave polygons)
+- Grid Based (Experimental)
 
 When the "Visualize part" setting is enabled, you can see the difference in wedge generation:
 
--   Ear-clipping
-    ![Shape Polygon Ear Clipping](/img/shapes/polygon-ear-clipping.png)
+- Ear-clipping
+  ![Shape Polygon Ear Clipping](/img/shapes/polygon-ear-clipping.png)
 
--   Delaunay
-    ![Shape Polygon Delaunay](/img/shapes/polygon-delaunay.png)
+- Delaunay
+  ![Shape Polygon Delaunay](/img/shapes/polygon-delaunay.png)
 
--   Simple
-    ![Shape Polygon Simple](/img/shapes/polygon-simple.png)
+- Simple
+  ![Shape Polygon Simple](/img/shapes/polygon-simple.png)
 
 ##### Demo of using Triangulation Algorithm and Visualize part settings
 
@@ -163,11 +164,11 @@ When you enable "Edit Mode" for a polygon, you can remove, move, and add points:
 
 ![Shape Polygon Simple](/img/shapes/polygon-edit-mode.gif)
 
--   Remove point: Click a point; when selected it turns red and you can press Backspace/Delete to remove it.
+- Remove point: Click a point; when selected it turns red and you can press Backspace/Delete to remove it.
 
--   Add point: Click an edge to create a point, then click & drag the point. Or click & drag directly on the edge to create and move a point immediately.
+- Add point: Click an edge to create a point, then click & drag the point. Or click & drag directly on the edge to create and move a point immediately.
 
--   Move point: Click & drag a point to move it; release when done.
+- Move point: Click & drag a point to move it; release when done.
 
 #### Edit selected polygon
 
@@ -175,8 +176,8 @@ You can edit an already created polygon. It does not have to be created with thi
 Select all the parts that make up a polygon, or a folder/model that contains those parts as children.
 Then press "Edit Selected Polygon ✏️". It regenerates all corner points including the height point and goes into Edit Mode. Then you can change height or move/remove/add points. When done, either:
 
--   Exit "Edit Mode" by unchecking Edit Mode checkbox (or using shortcut Shift+G)
--   Click "Finish Building" (or using shortcut Shift+T)
+- Exit "Edit Mode" by unchecking Edit Mode checkbox (or using shortcut Shift+G)
+- Click "Finish Building" (or using shortcut Shift+T)
 
 Note: Separate the UnionOperation before editing; otherwise you’ll be editing its bounding box.
 
@@ -267,9 +268,9 @@ Build a pyramid made of four CornerWedge parts that meet at a shared apex.
 
 #### Draw Modes
 
--   Width → Depth → Height
--   Center → Corner
--   Square: Center → Side
+- Width → Depth → Height
+- Center → Corner
+- Square: Center → Side
 
 ![Shape Pyramid](/img/shapes/shape-pyramid.gif)
 
@@ -299,9 +300,9 @@ Create a rounded capsule-like block.
 
 #### Draw Modes
 
--   Width → Depth → Height
--   Center → Corner
--   Square: Center → Side
+- Width → Depth → Height
+- Center → Corner
+- Square: Center → Side
 
 ![Shape Pill](/img/shapes/shape-pill.gif)
 
@@ -313,16 +314,16 @@ Create a fully rounded rectangular block (rounded edges and corners). Great for 
 
 #### Draw Modes
 
--   Width → Depth → Height
--   Center → Corner
--   Square: Center → Side
+- Width → Depth → Height
+- Center → Corner
+- Square: Center → Side
 
 ![Shape Pill](/img/shapes/shape-roundbox.gif)
 
 #### Radius Modes
 
--   Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
--   Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
+- Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
+- Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
 
 Works with Punch mode to cut rounded openings.
 
@@ -336,14 +337,14 @@ A performance-friendly rounded rectangle variant. Produces straight top/bottom f
 
 #### Draw Modes
 
--   Width → Depth → Height
--   Center → Corner
--   Square: Center → Side
+- Width → Depth → Height
+- Center → Corner
+- Square: Center → Side
 
 #### Radius Modes
 
--   Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
--   Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
+- Define Radius Last: after setting width/depth/height, place one extra point on the top face to set the inner flat size; the radius is derived from that, letting you visually dial in the corner roundness.
+- Predefined Radius: type a numeric radius that is used directly (default 0.5). Radius is clamped so it never exceeds half of width/depth/height.
 
 ### Shape - Sector
 
@@ -399,6 +400,112 @@ You can define the percentage that the hole will be from the width. Default 0.5,
   allowfullscreen
 ></iframe>
 
+### Shape - Curve (Bezier Path)
+
+Create smooth curves by placing anchor points. The plugin generates parts along the path using smooth Bezier interpolation. Perfect for roads, pipes, rails, decorative lines, and any organic flowing geometry.
+
+![Shape Curve Settings](/img/shapes/curve-settings.png)
+
+![Shape Curve](/img/shapes/shape-curve.gif)
+
+#### How to use
+
+1. Select the Curve shape from the shape selector
+2. Click to place anchor points (minimum 3 points required)
+3. The curve automatically smooths between points using Catmull-Rom interpolation
+4. Adjust settings in the panel as you place points
+5. Press Space or click "Finish Building" to complete
+
+#### Settings
+
+##### Width
+
+The width of each generated part along the curve. This is the horizontal dimension perpendicular to the curve direction.
+
+##### Height
+
+The height (vertical thickness) of each generated part. Adjust for thicker rails, roads, or thin ribbons.
+
+##### Depth (resolution)
+
+The length of each individual part along the curve direction. Smaller values create more parts and smoother curves; larger values create fewer, longer parts.
+
+##### Spacing (gap)
+
+The gap between consecutive parts along the curve. Set to 0 for continuous geometry with no gaps. Disabled for Fill and Touch alignment modes since those modes determine spacing automatically.
+
+#### Alignment Modes
+
+Control how parts are positioned and distributed along the curve:
+
+##### Center
+
+Parts are centered along the curve path. Even spacing with gaps between parts.
+
+![Curve Center Alignment](/img/shapes/curve-alignment-center.png)
+
+##### Left
+
+Parts are aligned to the left edge of the curve. Useful when building along a wall or boundary.
+
+![Curve Left Alignment](/img/shapes/curve-alignment-left.png)
+
+##### Right
+
+Parts are aligned to the right edge of the curve. Mirror of Left alignment.
+
+![Curve Right Alignment](/img/shapes/curve-alignment-right.png)
+
+##### Fill
+
+Parts stretch to completely fill the curve with no gaps. Uses parallel transport framing for smooth, twist-free orientation. Creates a continuous ribbon effect—perfect for roads or platforms.
+
+![Curve Fill Alignment](/img/shapes/curve-alignment-fill.png)
+
+**Use Adaptive Curvature**: When enabled, parts become smaller at curves by creating denser sampling at sharp corners. This results in smoother curves with better visual quality at bends. Enable this option if you want parts to be smaller at curves for smoother appearance.
+
+##### Touch
+
+Parts are sized so adjacent parts touch exactly at their edges. Uses adaptive curvature sampling to add extra parts at sharp corners. Good for segmented paths that need to look connected.
+
+![Curve Touch Alignment](/img/shapes/curve-alignment-touch.png)
+
+#### Template Support
+
+You can use a selected Part or Model as a template instead of simple rectangles. The template is repeated along the curve, following its orientation.
+
+When a template is selected, the **Template Axis** dropdown appears:
+
+- **Z / -Z**: Template's Z axis follows the curve direction
+- **Y / -Y**: Template's Y axis follows the curve direction
+- **X / -X**: Template's X axis follows the curve direction
+
+This lets you orient models correctly regardless of how they were authored.
+
+![Curve with Template](/img/shapes/curve-template.gif)
+
+#### Edit Mode
+
+Enable Edit Mode(Shift+G) to interactively adjust the curve after placing points:
+
+![Curve Edit Mode](/img/shapes/curve-edit-mode.gif)
+
+- **Move point**: Click & drag any anchor point to reposition it
+- **Delete point**: Select a point (turns red) then press Backspace/Delete
+- **Add point**: Click on an edge between anchors to insert a new point
+
+The curve updates in real-time as you edit, making it easy to refine paths.
+
+#### 3D Curves
+
+The Bezier Path supports 3D curves. Place points at different heights and the curve will smoothly interpolate through all of them. The parallel transport algorithm ensures parts maintain consistent orientation without unexpected twisting.
+
+![3D Curve](/img/shapes/curve-3d.gif)
+
+:::note
+When using Fill mode with 3D curves that change elevation, there may be small gaps between parts. Perfect gap-free surfaces in 3D would require additional wedge and corner-wedge parts, which is not currently implemented. For best results with elevation changes, use smaller Depth values to minimize visible gaps, or use Touch/Center modes with spacing.
+:::
+
 #### Demo of different shape types
 
 <iframe
@@ -449,5 +556,5 @@ You can define the percentage that the hole will be from the width. Default 0.5,
 
 ## Related
 
--   See [Common Settings](/docs/reference-common-settings) for shared options across builders
--   See [Keyboard Shortcuts](/docs/reference-shortcuts) to work faster
+- See [Common Settings](/docs/reference-common-settings) for shared options across builders
+- See [Keyboard Shortcuts](/docs/reference-shortcuts) to work faster
