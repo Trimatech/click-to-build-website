@@ -9,6 +9,13 @@ This page lists notable changes across releases. Use it to track new features, i
 
 - EditableMesh as a result from Shape Builder and Puncher
 - Shape Builder: Adding of arched corner (half-arch corner)
+- **Shape Builder: New shape — Arc**: Create smooth curved arches and arcs using cubic Bezier curves.
+    - Six quick preset styles: Default, Rounded, Horseshoe, Pointed, Small point, Ogee
+    - Configurable arc angle (-360° to 360°)
+    - Handle powers for fine-tuning curvature at center and endpoints
+    - Thickness and segment width controls for arc resolution
+    - Fill corners option for seamless base transitions
+    - Perfect for architectural elements like doorways, windows, bridges, and decorative arches
 
 ## 1.6.0
 

@@ -400,6 +400,79 @@ You can define the percentage that the hole will be from the width. Default 0.5,
   allowfullscreen
 ></iframe>
 
+### Shape - Arc
+
+Create smooth curved arches and arcs using cubic Bezier curves. Perfect for architectural elements like doorways, windows, bridges, decorative arches, and curved structural supports.
+
+![Shape Arc Settings](/img/shapes/arc-settings.png)
+
+![Shape Arc](/img/shapes/shape-arc.gif)
+
+#### How to use
+
+1. Select the Arc shape from the shape selector
+2. Click to place three points defining a rectangle (width → depth → height)
+3. The arc curves upward from the base rectangle using Bezier interpolation
+4. Adjust settings in the panel to customize the arc shape
+5. The arc is created automatically after placing the third point
+
+#### Arc Parameters
+
+##### Thickness
+
+The thickness (depth) of the arc. This controls how thick the arc appears when viewed from the side. Larger values create thicker, more substantial arcs.
+
+##### Segment width
+
+The width of each individual part along the arc curve. Smaller values create more parts and smoother curves; larger values create fewer, longer segments. This controls the resolution of the arc.
+
+##### Fill corners
+
+When enabled, fills the corners at the base of the arc with additional geometry for a smoother, more complete appearance. Useful for creating seamless transitions between the arc and its base.
+
+#### Quick Settings
+
+Choose from six preset arc styles for common use cases:
+
+- **Default**: A simple, standard arc with balanced curvature
+- **Rounded**: A thicker, more rounded arc with increased handle powers
+- **Horseshoe**: A U-shaped arc with a deep center curve
+- **Pointed**: An arc with a distinct upward point, creating a gothic arch style
+- **Small point**: Similar to Pointed but with a less pronounced point
+- **Ogee**: An S-shaped or wavy arc with elegant curves
+
+Click any preset to instantly apply its angle and handle power settings.
+
+#### Arc Angle
+
+The angle of the arc in degrees. Controls how much of a circle the arc spans:
+
+- **180°**: A half-circle arc (default)
+- **90°**: A quarter-circle arc
+- **360°**: A full circle (though typically used for partial arcs)
+
+Range: 0° to 360°
+
+#### Handle Powers
+
+Control the shape and curvature of the arc using Bezier handle powers:
+
+##### Center point
+
+Controls the curvature at the top (apex) of the arc. Higher values create more pronounced curves at the center:
+
+- **Lower values** (0.5-1.0): Flatter, more subtle curves
+- **Higher values** (1.5-3.0): Sharper, more dramatic curves at the top
+
+##### End point
+
+Controls the curvature at the endpoints (base) of the arc. Higher values create smoother transitions at the ends:
+
+- **Lower values** (0.5-1.0): Sharper transitions at the base
+- **Higher values** (1.5-4.0): Smoother, more gradual transitions
+
+Adjusting handle powers allows fine-tuning the arc shape beyond the preset styles. Experiment with different combinations to achieve the exact curvature you need.
+
 ### Shape - Curve (Bezier Path)
 
 Create smooth curves by placing anchor points. The plugin generates parts along the path using smooth Bezier interpolation. Perfect for roads, pipes, rails, decorative lines, and any organic flowing geometry.
