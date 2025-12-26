@@ -10,7 +10,7 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 ## When to use 🧩
 
 - Blocking out levels and paths
-- Creating walls, floors, ramps, wedges, cylinders, sectors, and spheres
+- Creating walls, floors, ramps, stairs, wedges, cylinders, sectors, and spheres
 - Drawing smooth curves for roads, rails, pipes, and organic shapes
 - Making clean, repeatable geometry with consistent dimensions
 
@@ -399,6 +399,49 @@ You can define the percentage that the hole will be from the width. Default 0.5,
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
+
+### Shape - Stairs
+
+Create diagonal staircases with configurable step dimensions. Steps automatically calculate along the diagonal from the starting point to the height point, making it easy to build staircases of any angle and length. Supports both upward (positive height) and downward (negative height) stairs.
+
+![Shape Stairs Settings](/img/shapes/stairs-settings.png)
+
+![Shape Stairs](/img/shapes/shape-stairs.gif)
+
+#### Draw Mode
+
+##### Width → Depth → Height
+
+Same draw mode as Block. Click to place:
+
+1. First point: starting corner of the stairs base
+2. Second point: defines the width of the stairs
+3. Third point: defines the depth of the stairs base
+4. Fourth point: defines the height where the stairs should end
+
+The stairs will climb diagonally from the base (at the second point) to the height point (fourth point). The height can be positive (upward stairs) or negative (downward stairs).
+
+#### Stairs Parameters
+
+##### Step Height
+
+The vertical height of each individual step. This controls how tall each step is. Larger values create taller steps; smaller values create shorter, more gradual steps.
+
+##### Step Depth
+
+The horizontal depth of each step along the diagonal. This controls how deep each step extends. Larger values create deeper steps; smaller values create narrower steps. Steps are spaced by this value along the horizontal projection of the diagonal.
+
+##### Gap
+
+The gap between consecutive steps. Can be:
+
+- **Positive values**: Creates spacing between steps
+- **Zero**: Steps are directly adjacent with no gap
+- **Negative values**: Steps overlap, creating a more compact staircase. With step height being small, can create overlapping hovering steps.
+
+##### Extend to floor
+
+When enabled, each step extends downward to reach the floor level. For upward stairs, the floor is at the starting point. For downward stairs, the floor is at the ending point. This creates steps that fully connect to the ground, useful for creating more complete stair structures. When disabled, steps only extend to their calculated height.
 
 ### Shape - Arc
 

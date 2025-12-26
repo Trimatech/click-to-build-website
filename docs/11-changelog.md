@@ -9,6 +9,17 @@ This page lists notable changes across releases. Use it to track new features, i
 
 - EditableMesh as a result from Shape Builder and Puncher
 - Shape Builder: Adding of arched corner (half-arch corner)
+- **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
+
+## 1.7.0
+
+- **Shape Builder: New shape — Stairs**: Create diagonal staircases with configurable step dimensions.
+    - Draw mode: Width → Depth → Height (same as Block)
+    - Configurable step height and step depth
+    - Gap control between steps (can be negative for overlapping steps)
+    - Extend to floor option to make steps reach the base level
+    - Steps automatically calculate along the diagonal from start to end point
+    - Perfect for creating staircases, ramps, and stepped structures
 - **Shape Builder: New shape — Arc**: Create smooth curved arches and arcs using cubic Bezier curves.
     - Six quick preset styles: Default, Rounded, Horseshoe, Pointed, Small point, Ogee
     - Configurable arc angle (-360° to 360°)
@@ -16,6 +27,7 @@ This page lists notable changes across releases. Use it to track new features, i
     - Thickness and segment width controls for arc resolution
     - Fill corners option for seamless base transitions
     - Perfect for architectural elements like doorways, windows, bridges, and decorative arches
+- **Curve Edit Mode: Non-mirroring anchor points**: Added support for non-mirroring anchor points in curve edit mode, giving you more control over Bezier curve handles for asymmetric curves.
 
 ## 1.6.0
 
