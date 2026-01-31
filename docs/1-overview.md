@@ -36,6 +36,10 @@ It streamlines building with click-to-place workflows, live previews, and precis
 
 ![All Plugins](/img/plugins-in-a-row.png)
 
+## Try the Demo 🎮
+
+Experience Click to Build in action! [Play the demo on Roblox](https://www.roblox.com/games/111890734008547/Click-to-Build-Demo) to see the plugin's capabilities firsthand.
+
 ## Next steps 👉
 
 -   Install the plugin in Roblox Studio: see [Installation](/docs/installation)

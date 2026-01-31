@@ -89,6 +89,11 @@ const config: Config = {
 				{ to: "/blog", label: "Blog", position: "left" },
 				{ to: "/showcase", label: "Showcase", position: "left" },
 				{
+					href: "https://www.roblox.com/games/111890734008547/Click-to-Build-Demo",
+					label: "Try Demo",
+					position: "right",
+				},
+				{
 					href: "https://create.roblox.com/store/asset/125786968176382/Click-To-Build-Plugin",
 					label: "Get on Roblox Store",
 					position: "right",
@@ -131,6 +136,10 @@ const config: Config = {
 						{
 							label: "Blog",
 							to: "/blog",
+						},
+						{
+							label: "Try Demo",
+							href: "https://www.roblox.com/games/111890734008547/Click-to-Build-Demo",
 						},
 					],
 				},
