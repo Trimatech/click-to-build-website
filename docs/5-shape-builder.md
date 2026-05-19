@@ -600,17 +600,64 @@ This lets you orient models correctly regardless of how they were authored.
 
 ![Curve with Template](/img/shapes/curve-template.gif)
 
+#### Cut along path
+
+After placing at least two points on a Bezier path, you can subtract a swept cut from touching parts using the red **Cut along path (SweepPartAsync)** button at the bottom of the Bezier Path settings block.
+
+![Bezier Path settings](/img/shapes/bezier-path-settings.png)
+
+![Cut along path button](/img/shapes/bezier-cut-along-path.png)
+
+**Requirements**
+
+- Select a **BasePart** as the template (in Template settings). Models are not supported for this action.
+- Place at least **two** anchor points on the curve.
+- The cut uses the same path sampling as the live preview (width, height, depth, alignment, and optional grid-aligned endpoints).
+
+**What it does**
+
+1. Samples the current Bezier path into sweep frames (matching how parts would be built along the curve).
+2. Sweeps the template part along those frames via `GeometryService.SweepPartAsync`.
+3. Subtracts the resulting hull from sliceable parts (same scope as Punch: all touching parts or only selected, per your cutter settings).
+
+Use this to carve grooves, slots, or tunnels along a curved guide without building placeholder parts first.
+
+:::warning Mesh parts must be saved to Roblox manually
+
+`SubtractAsync` cut results are mesh-backed parts. Save or publish each resulting mesh to Roblox from Studio before publishing your experience. See the [Tools dock](/docs/tools) warning for the full workflow.
+
+:::
+
+#### Curve Library
+
+![Curve Library - screenshot needed](/img/placeholder.svg)
+
+The **Curve Library** accordion lists ready-made Bezier presets you can place in one click:
+
+- **Closed 2D**: Circle, Rounded Square, Capsule, Star, Heart, Infinity ∞
+- **Open 2D**: Half-circle, Wave
+- **3D**: Spring (helix)
+
+Click **Build** on a preset to start placement on the active work plane. Adjust radius with your mouse, then commit like any other shape.
+
+**Save current curve**: While in Bezier edit mode, use **Save current curve…** to store the active path under a custom name. Saved curves appear in the same list for quick reuse.
+
 #### Edit Mode
 
-Enable Edit Mode(Shift+G) to interactively adjust the curve after placing points:
+Enable Edit Mode (Shift+G) to interactively adjust the curve after placing points:
 
 ![Curve Edit Mode](/img/shapes/curve-edit-mode.gif)
 
 - **Move point**: Click & drag any anchor point to reposition it
 - **Delete point**: Select a point (turns red) then press Backspace/Delete
 - **Add point**: Click on an edge between anchors to insert a new point
+- **Resize bounding box**: Drag the box handles (with axis rods) to scale the whole curve
+- **Rotate**: Use the rotation handle on the bounding box to spin the curve in the work plane
+- **Size labels**: W, H, and D labels show the bounding box dimensions while edit mode is active
 
-The curve updates in real-time as you edit, making it easy to refine paths.
+![Curve bbox edit mode - screenshot needed](/img/placeholder.svg)
+
+The curve updates in real-time as you edit, making it easy to refine paths. Sharp bends automatically get triangle bevels so tight corners stay visually clean.
 
 #### 3D Curves
 

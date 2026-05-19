@@ -11,6 +11,20 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.7.3
+
+- **Curve Library**: One-click Bezier presets — Circle, Rounded Square, Capsule, Half-circle, Star, Heart, Infinity ∞, Wave, and Spring. Save and reload your own curves from the panel.
+- **Bezier Path — closed curves**: Closed-loop presets and improved handling when the path forms a loop.
+- **Bezier Path — sharp bends**: Triangle bevels at tight corners for cleaner geometry on sharp paths.
+- **Bezier edit mode — resize & rotate**: Bounding-box handles with axis rods, plus a rotation handle to spin the whole curve. W / H / D labels show box dimensions while editing.
+- **Bezier Path — Cut along path**: Red button at the bottom of Bezier Path settings sweeps a BasePart template along the curve and subtracts from touching parts (`SweepPartAsync`).
+- **Tools dock — Bezier sweep cut**: Cut parts along a Bezier path with configurable thickness, depth (studs or layer count), and optional recolor of cut pieces.
+
+## 1.7.2
+
+- **Template history dropdown**: Faster re-selection of recently used templates in Model Placer and Shape Builder.
+- Template selector and segment preview performance improvements.
+
 ## 1.7.0
 
 - **Shape Builder: New shape — Stairs**: Create diagonal staircases with configurable step dimensions.

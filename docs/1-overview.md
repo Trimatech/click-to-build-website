@@ -33,6 +33,7 @@ It streamlines building with click-to-place workflows, live previews, and precis
 -   [Shape Builder](/docs/shape-builder): draw primitives and custom geometry
 -   [Model Placer](/docs/model-placer): assemble and align multi-part models
 -   [Structure Builder](/docs/structure-builder): generate repeated patterns and layouts
+-   [Tools dock](/docs/tools): runtime cutting tools including Bezier sweep cut along a path
 
 ![All Plugins](/img/plugins-in-a-row.png)
 

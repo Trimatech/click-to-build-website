@@ -247,6 +247,12 @@ What gets copied to the new Shape (when a template is set):
 - UI Scale: Scale the plugin UI (useful for high‑DPI or small screens).
 - Reset Settings: Revert all settings to defaults and end active building.
 
+### What's New (changelog in plugin)
+
+At the bottom of each builder panel (and the Tools dock), the **What's New** accordion lists recent release notes. A red dot appears when there is a changelog you have not opened yet — expand the accordion once to mark it as read.
+
+![Whats New accordion - screenshot needed](/img/placeholder.svg)
+
 ## Related 🔗
 
 - See [Shape Builder](/docs/shape-builder), [Structure Builder](/docs/structure-builder), and [Model Placer](/docs/model-placer) for builder‑specific options
