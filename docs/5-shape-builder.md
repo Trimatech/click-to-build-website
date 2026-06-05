@@ -48,6 +48,16 @@ Constrained square variant of the center-based mode. Click the center, then a si
 
 ![Shape Builder Square](/img/shapes/shape-builder-square.gif)
 
+#### Preset Size (locked dimensions)
+
+In **Width → Depth → Height** mode you can lock any of the three dimensions to a fixed value so you don't have to click to define it. This is great for repeatable footprints and for stamping parts at a constant height.
+
+![Preset Size inputs - screenshot needed](/img/placeholder.svg)
+
+- **Width / Depth / Height**: Type a value (studs) to lock that dimension. The corresponding click is skipped and the part is built using the preset value.
+- **Dynamic (0)**: Leave a field empty or set it to `0` to keep drawing that dimension with the mouse as usual.
+- Tip: Lock just **Height** to drop many same-height blocks in one click each; lock **Width** and **Depth** for a fixed footprint you can place repeatedly.
+
 ### Shape - Plane
 
 Create a rectangular plane aligned to the current work plane. Useful for floors, walls, and reference surfaces.
@@ -668,6 +678,38 @@ The Bezier Path supports 3D curves. Place points at different heights and the cu
 :::note
 When using Fill mode with 3D curves that change elevation, there may be small gaps between parts. Perfect gap-free surfaces in 3D would require additional wedge and corner-wedge parts, which is not currently implemented. For best results with elevation changes, use smaller Depth values to minimize visible gaps, or use Touch/Center modes with spacing.
 :::
+
+### Shape - Stamp
+
+A stack-on-face tool: hover any part's face and click to create a new part that matches that face's footprint, extruded outward along the face normal. Perfect for quickly building up greebles, ledges, caps, and stacked details without measuring.
+
+![Shape Stamp Settings - screenshot needed](/img/placeholder.svg)
+
+![Shape Stamp - gif needed](/img/placeholder.svg)
+
+#### How to use
+
+1. Select the **Stamp** tool from the shape selector.
+2. Hover the face of an existing part — a preview appears matching the face footprint.
+3. Click to commit the stamped part.
+
+Blocks stay blocks and cylinder caps stay cylinders, so the new part inherits the hovered face's shape and footprint automatically.
+
+#### Settings
+
+##### Height (studs)
+
+How far the new part is extruded outward from the hovered face along its normal.
+
+##### Lip (widen on all sides)
+
+When enabled, the stamped footprint grows outward by a configurable number of studs.
+
+- **Lip (studs)**: How far the footprint extends beyond the original face on each side.
+
+##### Dynamic lip (toward hovered edge)
+
+When enabled, the lip overhangs only the edge or corner under the cursor instead of widening every side. Hover the center of the face to widen all sides, or hover near an edge/corner to overhang in that direction — useful for ledges and overhangs.
 
 #### Demo of different shape types
 

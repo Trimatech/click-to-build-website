@@ -119,6 +119,9 @@ What gets copied to the new Shape (when a template is set):
 
 - Points on one surface: Constrains new points to the current work plane for even elevation.
 - Max Corner (∠): Limits the turn angle between consecutive segments to keep corners clean.
+- Ignore invisible parts: Skip fully transparent/invisible parts when snapping and cutting, so hidden helper parts don't interfere with building. Leave off to keep treating invisible parts as solid surfaces.
+
+  ![Ignore invisible parts - screenshot needed](/img/placeholder.svg)
 
 ### Offset Settings
 
@@ -238,7 +241,10 @@ What gets copied to the new Shape (when a template is set):
 
 - Point Size: Visual size of control points while editing.
 - Show info box: Toggle on‑screen hints and shortcuts.
-- Show distances UI: Display live distances between points while placing.
+- Show distances UI: Display live distances between points while placing. This also shows an **angle indicator** — X/Z component lines and the angle between the active segments, with a right-angle marker and perpendicular guide when the segments are axis-parallel.
+
+  ![Angle indicator - gif needed](/img/placeholder.svg)
+
 - Show coordinates UI: Display point coordinates (X, Y, Z values) while placing.
 - Output Type: Decide whether generated geometry is grouped into a `Folder` or `Model`.
 - Output To: Route results to `Workspace` (default) or the first selected folder/model in the Explorer. If you select a part, the plugin climbs up the hierarchy until it finds a folder/model; if nothing valid is selected it safely falls back to `Workspace`.

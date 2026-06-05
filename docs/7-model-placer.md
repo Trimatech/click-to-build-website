@@ -31,6 +31,9 @@ You can change the template by selecting another model and clicking "Change to M
 Controls the direction in which consecutive models are placed. The preview shows a neon blue guide along the primary axis. Saved per template — see Settings persistence below.
 
 -   If axis detection behaves unexpectedly, add or adjust a `PrimaryPart` using "Add primary part 🧱" and try again.
+-   **Flip Model**: Reverses the placement axis direction for templates that were authored facing the other way. The axis indicator and placement offset update to match, so the model lines up without re-authoring its `PrimaryPart`.
+
+    ![Flip Model toggle - screenshot needed](/img/placeholder.svg)
 
 ### Corner Settings / Other Settings
 

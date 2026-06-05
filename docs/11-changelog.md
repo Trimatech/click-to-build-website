@@ -11,6 +11,24 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.8.0
+
+- **Shape Builder: New Stamp tool**: Hover a part's face and click to stack a new part that matches the face footprint, extruded outward along the face normal.
+    - Blocks stay blocks; cylinder caps stay cylinders — the stamped part inherits the hovered face's shape and footprint.
+    - **Height (studs)**: How far the new part is extruded outward from the hovered face.
+    - **Lip (widen on all sides)**: Optionally grow the footprint outward by a set number of studs.
+    - **Dynamic lip**: When enabled, the lip overhangs only the edge/corner under the cursor instead of widening every side (hover the center to widen all sides).
+    ![Stamp tool - gif needed](/img/placeholder.svg)
+- **Shape Builder: Preset Size (locked dimensions)**: In Width → Depth → Height mode you can lock Width, Depth, and/or Height to a fixed value to skip that click.
+    - Lock Height to stamp parts at a constant height; lock Width/Depth for repeatable footprints.
+    - Leave a dimension empty (0) to keep drawing it dynamically with the mouse.
+    ![Preset Size inputs - screenshot needed](/img/placeholder.svg)
+- **Angle indicator while drawing**: Live X/Z component lines and the angle between the active segments are shown as you place points, with a right-angle marker and perpendicular indicator when segments are axis-parallel.
+    ![Angle indicator - gif needed](/img/placeholder.svg)
+- **Surface Settings: Ignore invisible parts**: Skip fully transparent/invisible parts when snapping and cutting, so hidden helpers don't interfere with building.
+- **Model Placer: Flip Model**: New toggle reverses the placement axis direction, with a matching axis indicator and offset handling for templates that were authored facing the other way.
+- **Grid rendering improvements**: Refreshed grid colors and extent calculation for clearer, more consistent grids across modes.
+
 ## 1.7.3
 
 - **Curve Library**: One-click Bezier presets — Circle, Rounded Square, Capsule, Half-circle, Star, Heart, Infinity ∞, Wave, and Spring. Save and reload your own curves from the panel.
