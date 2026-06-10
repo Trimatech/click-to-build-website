@@ -759,6 +759,40 @@ When enabled, the lip overhangs only the edge or corner under the cursor instead
   allowfullscreen
 ></iframe>
 
+### Shape - Voxel
+
+A grid-cell extrusion tool: hover a cell on the work plane and drag up to stack blocks; hover the top of an existing block and drag down to carve cells away. Great for fast terrain, walls, and blocky structures aligned to the grid.
+
+![Shape Voxel Settings - screenshot needed](/img/placeholder.svg)
+
+![Shape Voxel - gif needed](/img/placeholder.svg)
+
+#### How to use
+
+1. Select the **Voxel** tool from the shape selector.
+2. Hover a grid cell — a green ghost shows how many cells you will add.
+3. Drag up and release to extrude blocks.
+4. Hover the top of a block you created — a red ghost shows removal.
+5. Drag down and release to remove cells from that column.
+
+Blocks are placed relative to the current work plane and grid size, not the world axes.
+
+#### Settings
+
+##### Optimize resulting blocks
+
+When enabled, adjacent same-height blocks with matching material merge into larger rectangles after each add. No CSG — only axis-aligned boxes. Wedges are excluded from merging.
+
+##### Advanced building
+
+When enabled, where you hover inside a cell picks the extruded shape:
+
+- **Cell center**: a plain block (default behavior).
+- **Near an edge**: a wedge rising at that edge.
+- **Near a corner**: a corner wedge peaking at that corner.
+
+Hover a wedge's top edge (or a corner wedge's peak) to resize it — drag to zero to remove it.
+
 ## Related
 
 - See [Common Settings](/docs/reference-common-settings) for shared options across builders

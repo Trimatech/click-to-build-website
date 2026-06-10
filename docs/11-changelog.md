@@ -11,6 +11,16 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.9.0
+
+- **Shape Builder: New Voxel tool**: Build with whole grid cells — hover a cell and drag up to extrude blocks (green preview); hover the top of a block you made and drag down to remove cells (red preview).
+    - Respects the current work plane and grid size; blocks are placed and carved relative to the surface you are building on.
+    - Removal cuts through stacked blocks in the column, using boolean subtraction for non-box parts when needed.
+    ![Voxel tool - gif needed](/img/placeholder.svg)
+- **Voxel Optimize**: When enabled, adjacent same-height blocks with matching material (material, variant, color, transparency, reflectance, textures) merge into larger rectangles — no CSG, rectangle-only retiling.
+- **Voxel Advanced building**: When enabled, hovering near a cell edge extrudes a wedge rising at that edge; hovering near a corner gives a corner wedge peaking there. Hover a wedge's top edge (or a corner wedge's peak) to resize it — drag to zero to remove it.
+- **Output routing overlay**: A compact viewport info box shows where generated content goes, with a quick Workspace ↔ Selection toggle and a lock to pin routing to the current selection.
+
 ## 1.8.0
 
 - **Shape Builder: New Stamp tool**: Hover a part's face and click to stack a new part that matches the face footprint, extruded outward along the face normal.
