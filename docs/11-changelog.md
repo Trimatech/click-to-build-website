@@ -11,6 +11,61 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.9.11
+
+- **Tools Dock: New Nudger tool**: Click an existing part face to move the whole part, or resize only that clicked face, by a precise step amount. Designed for fixing z-fighting and tiny alignment issues without rebuilding geometry.
+    - Operation: Move part or Resize part.
+    - Direction: Pull/Push for moves, Grow/Shrink for resizes.
+    - Preview on hover: temporarily shows the result before you click to commit.
+    - Quick steps: jump between coarse values and very small values like `0.001` or `0.0001` studs.
+- **Pinned tools**: Katana, Laser, and Nudger can be pinned into the viewport PINNED bar and launched without reopening the Tools dock.
+- **Custom grid color**: Advanced Settings now includes a Custom grid color toggle. Leave it off for automatic surface-adaptive grid colors, or turn it on to use one fixed grid line color.
+- **Tool icons and assets**: Refreshed tool icons and re-uploaded icon assets for cleaner Creator Store/package distribution.
+
+## 1.9.10
+
+- Asset and icon refresh for button/tool artwork.
+- Updated shared `@rbxts-ui` package versions for current UI behavior and polish.
+
+## 1.9.9
+
+- **Pinned viewport shortcuts**: Pin frequently used controls into the in-world PINNED bar:
+    - Shape quick-launch buttons from Shape Builder.
+    - Tool quick-launch buttons from the Tools dock.
+    - Quick grid values, grid mode, snap-to-part, edge-aligned grid, offset presets, template panel, Punch Mode, and common settings toggles.
+- **Viewport overlay controls**: Advanced Settings now separates visibility for shortcuts, output, pinned controls, build info, distances, and coordinates.
+- **Template panel shortcuts**: The template panel can be pinned for faster access while building.
+- **Shape icon refresh**: Shape Builder icons were updated for clearer scanning.
+
+## 1.9.6
+
+- Build and deployment cleanup for plugin publishing.
+- Plugin window layout polish for a better default fit.
+
+## 1.9.5
+
+- **Bezier Path — Cut along path**: The action button was compacted so it fits better in the settings panel.
+- Dependency maintenance for the shared UI packages.
+
+## 1.9.4
+
+- More UI consistency and dark-mode polish across template selectors, settings rows, and Model Builder.
+- Round action buttons such as reload/unlink no longer look washed out on Studio's dark theme.
+
+## 1.9.3
+
+- UI consistency pass across Structure, Shape, Tools, and Sequence panels.
+- Cutter settings use simpler mode labels with an inline explanation of each cut mode.
+
+## 1.9.2
+
+- Advanced Settings: fixed the Theme label rendering far too small.
+
+## 1.9.1
+
+- UI refresh for inputs, checkboxes, buttons, and accordions.
+- Plugin UI follows Roblox Studio light/dark theme automatically.
+
 ## 1.9.0
 
 - **Shape Builder: New Voxel tool**: Build with whole grid cells — hover a cell and drag up to extrude blocks (green preview); hover the top of a block you made and drag down to remove cells (red preview).

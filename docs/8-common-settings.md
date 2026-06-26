@@ -167,7 +167,7 @@ What gets copied to the new Shape (when a template is set):
 #### Other settings
 
 - Grid Size: Spacing used for grid snapping.
-- Quick Grid: One‑tap presets 10, 5, 1, and the minimum size.
+- Quick Grid: One‑tap presets 10, 5, 1, and the minimum size. The preset row can be pinned into the viewport PINNED bar.
 - Snap to part: Snap points to nearby part vertices/edges.
 - Align grid to current edge: Rotate and position the grid to the current edge on the work surface.
 
@@ -240,6 +240,8 @@ What gets copied to the new Shape (when a template is set):
 ![Advanced Settings](/img/common/advanced-settings.png)
 
 - Point Size: Visual size of control points while editing.
+- Custom grid color: Leave off to let grid lines auto-adapt to the surface color, or turn it on to paint every grid line with one fixed color.
+    - Grid Color: Color picker shown when Custom grid color is enabled.
 - Show info box: Toggle on‑screen hints and shortcuts.
 - Show distances UI: Display live distances between points while placing. This also shows an **angle indicator** — X/Z component lines and the angle between the active segments, with a right-angle marker and perpendicular guide when the segments are axis-parallel.
 
@@ -252,6 +254,20 @@ What gets copied to the new Shape (when a template is set):
 - Enable logging: Print internal events to the console for debugging.
 - UI Scale: Scale the plugin UI (useful for high‑DPI or small screens).
 - Reset Settings: Revert all settings to defaults and end active building.
+
+### Pinned viewport shortcuts
+
+Rows with a pin button can be added to the viewport **PINNED** bar. This keeps frequently used controls close to the cursor while you build, without reopening the full plugin panel.
+
+Common pinned controls include:
+
+- Shape quick-launch buttons from Shape Builder.
+- Tool quick-launch buttons from the Tools dock.
+- Quick Grid values, Grid Mode, Snap to part, and Align grid to current edge.
+- Quick Offset, Bottom on surface, Points on one surface, Ignore invisible parts, Union on finish, Alternating Offset, and Punch Mode.
+- Template panel access and viewport overlay toggles.
+
+Use **Show pinned UI** in Advanced Settings to hide or show the pinned bar.
 
 ### What's New (changelog in plugin)
 

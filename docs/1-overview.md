@@ -26,14 +26,15 @@ It streamlines building with click-to-place workflows, live previews, and precis
 -   Reuse look & feel via Template copying; optional union‑on‑finish for visuals
 -   Scale efficiently: fewer clicks for long runs (paths, fences, walls, grids)
 -   Model flows: Magic Merge and alternating offsets reduce seams/z‑fighting
--   Keyboard shortcuts and focused UI speed up repetitive actions
+-   Keyboard shortcuts, pinned viewport controls, and focused UI speed up repetitive actions
+-   Fix tiny part alignment and z-fighting issues with the Tools dock Nudger
 
 ## Main areas
 
 -   [Shape Builder](/docs/shape-builder): draw primitives and custom geometry
 -   [Model Placer](/docs/model-placer): assemble and align multi-part models
 -   [Structure Builder](/docs/structure-builder): generate repeated patterns and layouts
--   [Tools dock](/docs/tools): runtime cutting tools including Bezier sweep cut along a path
+-   [Tools dock](/docs/tools): runtime tools including Katana/Laser cuts and Nudger adjustments
 
 ![All Plugins](/img/plugins-in-a-row.png)
 
