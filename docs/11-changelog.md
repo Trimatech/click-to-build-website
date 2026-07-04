@@ -11,6 +11,22 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.9.13
+
+- **Shape Builder: Line overhaul** — Line now builds a plain box per segment sized by **Height & Width**, so you no longer need a template to draw one. Pick a part or model in Template Settings to build from its shape instead.
+    - **Corner Type**: shape each turn between segments — None, Sharp, Round, Bevel, Chamfer, or Curve.
+        - Bevel: optional **Bevel inner corner** with an **Amount**.
+        - Chamfer: **Amount** cut size.
+        - Curve: **Length** (how far the segments pull back) and **Resolution** (how many parts form the arc — higher is smoother).
+    - **Corner Alignment**: control how parts meet at a turn (applies in every mode).
+    - **Copy shape**: with a part template, adopt its shape, size, and look — or turn it off to wear just the template's look on plain boxes of your own Height & Width.
+    - Model templates keep **Magic Merge**, placement modes, extend-to-mouse, and spacing.
+- **Shape Builder: Line Edit Mode** — Edit a placed Line just like Polygon and Curve: drag corner points, click a segment to insert a point, and delete points. Works on both plain and template lines.
+- **Close Loop** — While drawing a Line, press **Space** to connect the last point back to the first and close the shape. Closing a loop drops you straight into Edit Mode.
+- **Bezier Path: Smoothness & Resolution** — New **Smoothness** control and **Resolution (studs)** input to tune how densely the curve is built.
+- **Set height per point** — New Surface Settings toggle for two-click placement: place a point, then click again to set its own height. Can be pinned to the viewport PINNED bar.
+- **More Plugins panel** — A new panel in each tool links to the rest of the Trimatech building-tool family, with quick Creator Store and DevForum links.
+
 ## 1.9.11
 
 - **Tools Dock: New Nudger tool**: Click an existing part face to move the whole part, or resize only that clicked face, by a precise step amount. Designed for fixing z-fighting and tiny alignment issues without rebuilding geometry.

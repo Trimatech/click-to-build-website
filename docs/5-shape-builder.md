@@ -12,6 +12,7 @@ Draw primitives and custom geometry directly in the viewport with live previews,
 - Blocking out levels and paths
 - Creating walls, floors, ramps, stairs, wedges, cylinders, sectors, and spheres
 - Drawing smooth curves for roads, rails, pipes, and organic shapes
+- Laying out connected segment paths — roads, walls, fences, and curbs — with shaped corners (Line)
 - Making clean, repeatable geometry with consistent dimensions
 
 ## Workflow 🛠️
@@ -678,6 +679,80 @@ The Bezier Path supports 3D curves. Place points at different heights and the cu
 :::note
 When using Fill mode with 3D curves that change elevation, there may be small gaps between parts. Perfect gap-free surfaces in 3D would require additional wedge and corner-wedge parts, which is not currently implemented. For best results with elevation changes, use smaller Depth values to minimize visible gaps, or use Touch/Center modes with spacing.
 :::
+
+### Shape - Line
+
+Draw a path of connected straight segments — a road, wall, fence, curb, or pipe run — by clicking to place points. Each segment is built as its own part, and every turn between segments is shaped by the **Corner Type**. With no template, Line builds a plain box per segment sized by **Height & Width**, so you don't need to prepare any geometry first. Point a Part or Model template at it (in Template Settings) to build from that shape instead.
+
+![Shape Line Settings - screenshot needed](/img/placeholder.svg)
+
+![Shape Line - gif needed](/img/placeholder.svg)
+
+#### How to use
+
+1. Select the **Line** shape from the shape selector.
+2. Click to place points. A straight part is drawn between each pair of consecutive points, updating live as you move the mouse.
+3. Adjust settings (Height, Width, Corner Type, alignment) while placing — the preview updates.
+4. Press **Space** to close the loop (connect the last point back to the first), or click **Finish Building** to end an open line.
+
+#### Part Settings (plain mode)
+
+When there is no template (or "Copy shape" is off), each part is a plain box:
+
+- **Height**: Vertical thickness of each segment part.
+- **Width**: Horizontal width of each segment part, perpendicular to the segment direction.
+
+#### Corner Type
+
+Choose how each turn between two segments is shaped:
+
+![Line Corner Types - screenshot needed](/img/placeholder.svg)
+
+- **None**: Segments simply meet; no extra corner geometry.
+- **Sharp**: A mitered joint that fills the wedge between the two segments for a clean, solid corner.
+- **Round**: A cylindrical corner that rounds the turn.
+- **Bevel**: A flat, angled corner across the turn.
+    - **Bevel inner corner**: Also bevel the inside of the turn. When on, **Amount** sets the bevel segment length.
+- **Chamfer**: A cut corner. **Amount** sets the size of the cut.
+- **Curve**: A smooth, multi-part arc around the turn.
+    - **Length**: How far the segments pull back to make room for the arc.
+    - **Resolution**: How many parts form the arc — higher is smoother.
+
+![Line Corner Types comparison - gif needed](/img/placeholder.svg)
+
+:::tip
+Corner rounding lines up best with the **None** corner alignment.
+:::
+
+#### Corner Alignment
+
+Controls how parts meet at a turn (applies in every mode): **Outside**, **Inside**, **Fill**, **Touch**, or **None**.
+
+![Line Corner Alignment - screenshot needed](/img/placeholder.svg)
+
+#### Building from a template
+
+Pick a **Part** or **Model** in Template Settings to build the line from an existing shape instead of plain boxes.
+
+- **Part template — Copy shape**: With "Copy shape" on, each segment adopts the part's shape, size, and look, and the corner fillers match its look. Turn "Copy shape" off to keep plain boxes of your own Height & Width that only wear the part's look.
+- **Model template**: The model is cloned along the path. Model turns are resolved by **Magic Merge** (with an optional **Clean up small parts after merge**) rather than the Corner Types.
+    - **Placement Mode**: None, Copy, or Stretch — how the model repeats or fits along each segment.
+    - **Extend to mouse position**: Stretch the current segment out to the cursor.
+    - **Spacing**: Gap (studs) between repeated copies.
+
+![Line with template - gif needed](/img/placeholder.svg)
+
+#### Edit Mode
+
+Enable **Edit Mode** (Shift+G) to adjust a placed line after the fact — on both plain and template lines, just like Polygon and Curve:
+
+![Line Edit Mode - gif needed](/img/placeholder.svg)
+
+- **Move point**: Click & drag any point to reposition it.
+- **Add point**: Click a segment to insert a new point.
+- **Delete point**: Select a point (it turns red) then press Backspace/Delete.
+
+Closing the loop with **Space** while drawing automatically drops you into Edit Mode.
 
 ### Shape - Stamp
 
