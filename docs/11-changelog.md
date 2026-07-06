@@ -11,6 +11,13 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.9.15
+
+- **Line Round corners: choose the corner shape** — When the Line's Corner Type is **Round**, a new **Round shape** control lets you pick **Auto**, **Cylinder**, or **Sphere**.
+    - **Sphere**: drops a ball joint at each turn so segments connect with no gap or overlap — perfect for cylinder pipes.
+    - **Cylinder**: the classic vertical pillar corner.
+    - **Auto** (default): picks a **Sphere** corner when your template part is a cylinder, and a **Cylinder** corner otherwise, so pipes round smoothly out of the box while boxes keep the pillar.
+
 ## 1.9.13
 
 - **Shape Builder: Line overhaul** — Line now builds a plain box per segment sized by **Height & Width**, so you no longer need a template to draw one. Pick a part or model in Template Settings to build from its shape instead.
