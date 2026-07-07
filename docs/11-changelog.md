@@ -11,6 +11,14 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.9.16
+
+- **Edit Mode: free 3D point movement** — Dragging a point now always uses the free 3D Move gizmo, so points move in any direction regardless of the **Lock to first surface** setting. Applies to Line, Polygon, and Bezier editing.
+- **Bezier Path: frozen work plane while editing** — The work plane is locked during point editing, so the curve no longer shifts unexpectedly mid-edit.
+- **Edit Mode toggle** — Line, Polygon, and Bezier settings now share a consistent Edit Mode toggle switch for entering and leaving editing.
+- **Routing info tooltips** — The build routing info box gained tooltips explaining the destination and lock controls.
+- **Refreshed corner type icons** — Updated the Line corner type images (None, Sharp, Round, Bevel, Chamfer, Curve).
+
 ## 1.9.15
 
 - **Line Round corners: choose the corner shape** — When the Line's Corner Type is **Round**, a new **Round shape** control lets you pick **Auto**, **Cylinder**, or **Sphere**.
