@@ -3,6 +3,12 @@ id: model-placer
 title: Model Placer
 ---
 
+:::warning Deprecated
+
+Model Placer is deprecated. Use the [Shape Builder's **Line** or **Curve** shape](/docs/shape-builder) with a model template instead — they offer the same placement modes, corner settings, and Magic Merge, plus point editing, spacing, extra corner types, and closable loops. Model Placer keeps working for now, but new features land in the Shape Builder.
+
+:::
+
 ## What it is ℹ️
 
 Place complex models in sequence and seamlessly connect them.

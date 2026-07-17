@@ -3,6 +3,12 @@ id: structure-builder
 title: Structure Builder
 ---
 
+:::warning Deprecated
+
+Structure Builder is deprecated. Use the [Shape Builder's **Line** shape](/docs/shape-builder) (or **Curve** for curved runs) with a part template instead — it builds the same walls from Height & Width, plus point editing, spacing, extra corner types, and closable loops. Structure Builder keeps working for now, but new features land in the Shape Builder.
+
+:::
+
 ## What it is ℹ️
 
 Generate repeated or patterned structures like walls, fences, posts, or grids from simple inputs.

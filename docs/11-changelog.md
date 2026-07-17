@@ -11,6 +11,27 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.12.0
+
+- **New Resizer tool** — Select any number of parts and drag one handle to resize the whole build in one direction, rotated parts included. **Stretch** mode resizes the selection like one solid shape, so widening a house keeps its wedge roof a perfect triangle. See [Tools Dock — Resizer](/docs/tools#resizer).
+    - **Small details**: parts and models below the **Stretch threshold** keep their size — glued in place when they sit at an end (resizing a window grows only the pane, its frame stays), and following their relative spot when they sit in the middle (windows spread evenly along a widened wall).
+    - **Highlight small details**: hover or drag a handle to outline every part that will keep its size in orange — handy for tuning the threshold before you commit to a drag.
+    - Studio-style handles: small per-axis colored cubes on the selection bounds that stay the same size on screen.
+    - Options: **Stretch** or **Same amount** resize style, **Keep size** or **Stretch** for small models, an adjustable **Stretch threshold**, resize from **One side** or **Center**, **World**- or **Last part**-aligned handles, and a **Snap increment** with quick presets.
+- **New Door tool** — Click a post, then a gate, and get a working hinged door: a vertical hinge is added at the gate's edge nearest the post. Optional welding of the gate into one swinging assembly, post anchoring, and a swing angle limit. See [Tools Dock — Door](/docs/tools#door).
+- **One-click tools and shapes** — Clicking a shape or tool in its selector now selects and starts it immediately; click the active one again to stop (shapes commit the build in progress).
+- **Structure Builder and Model Placer deprecated** — The Shape Builder's **Line** and **Curve** shapes cover the same builds with part and model templates — plus point editing, spacing, extra corner types, and closable loops. The old tools keep working but show a deprecation notice.
+
+## 1.11.0
+
+- **Dropdown menus stay on screen** — When there isn't room below, dropdowns open upward or scroll instead of getting cut off.
+- **Tooltip fixes** — Tooltips no longer clip long descriptions, and info tooltips support richer text formatting.
+
+## 1.10.0
+
+- **Shared settings across the Trimatech plugin family** — Theme, UI scale, Click sounds, and Logging now sync between all installed Trimatech plugins: change them once in any plugin and every plugin follows, live and across Studio restarts.
+- **Click sounds toggle** — Plugin Settings gained a Click sounds toggle to turn the button click sound off (or back on) everywhere at once.
+
 ## 1.9.16
 
 - **Edit Mode: free 3D point movement** — Dragging a point now always uses the free 3D Move gizmo, so points move in any direction regardless of the **Lock to first surface** setting. Applies to Line, Polygon, and Bezier editing.
