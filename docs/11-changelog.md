@@ -11,6 +11,14 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.13.0
+
+- **New Seat shape** — Draw it exactly like a Block, get a real working `Seat` part. Sits right next to Block in the shape grid and supports all the Block draw modes and preset sizes. See [Shape Builder — Seat](/docs/shape-builder#shape---seat).
+    - **Seat or Vehicle seat** — A **Type** toggle picks which class is placed: a regular `Seat`, or a `VehicleSeat` that also captures movement input from the seated player (a driver's seat).
+    - **Sitting preview** — A ghost character sits on the preview while you draw, so you can size and position the seat against real character proportions before committing. Preview only — no character is added to your game.
+    - **Pick the preview character** — R15, R6, or Rthro Noob rig, **My character** (your own avatar), or **Custom user** by UserId, `@name`, username, or profile URL.
+    - **Show characters on all seats** — Optionally preview a sitting character on every Seat and VehicleSeat already in your workspace while the Seat shape is active, to review seat placement across the whole place at once.
+
 ## 1.12.0
 
 - **New Resizer tool** — Select any number of parts and drag one handle to resize the whole build in one direction, rotated parts included. **Stretch** mode resizes the selection like one solid shape, so widening a house keeps its wedge roof a perfect triangle. See [Tools Dock — Resizer](/docs/tools#resizer).

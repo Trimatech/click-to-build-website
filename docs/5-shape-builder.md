@@ -59,6 +59,45 @@ In **Width → Depth → Height** mode you can lock any of the three dimensions 
 - **Dynamic (0)**: Leave a field empty or set it to `0` to keep drawing that dimension with the mouse as usual.
 - Tip: Lock just **Height** to drop many same-height blocks in one click each; lock **Width** and **Depth** for a fixed footprint you can place repeatedly.
 
+### Shape - Seat
+
+Draws exactly like a **Block**, but the placed part is a real, working `Seat` (or `VehicleSeat`) — characters can sit on it in game with no extra setup. While you draw, a semi-transparent ghost character sits on the preview so you can size and position the seat against actual character proportions before committing.
+
+![Shape Seat Settings - screenshot needed](/img/placeholder.svg)
+
+![Shape Seat - gif needed](/img/placeholder.svg)
+
+#### How to use
+
+1. Select the **Seat** shape from the shape selector (next to Block).
+2. Draw it like a Block — all Block [draw modes](#draw-modes) and [preset sizes](#preset-size-locked-dimensions) apply.
+3. Watch the ghost character on the preview to judge seat height and depth, then click to commit.
+
+The preview characters are never added to your game — only the seat part is placed.
+
+#### Seat
+
+##### Type
+
+Which sit-part class is placed:
+
+- **Seat** (default): characters sit when they touch it.
+- **Vehicle seat**: a `VehicleSeat` — also captures movement input from the seated player, so use it as the driver's seat of a vehicle.
+
+#### Seat Character
+
+##### Character
+
+Who sits on the preview:
+
+- **R15 Noob** (default), **R6 Noob**, **Rthro Noob**: standard rigs for checking classic proportions.
+- **My character**: your own avatar.
+- **Custom user**: any Roblox user — enter a UserId, `@name`, username, or profile URL in the **User** field.
+
+##### Show characters on all seats
+
+While the Seat shape is active, also previews a sitting character on every `Seat` and `VehicleSeat` already in the workspace (occupied seats are skipped). Great for reviewing seat placement and spacing across a whole place at once. Preview only — the characters disappear when you switch shapes.
+
 ### Shape - Plane
 
 Create a rectangular plane aligned to the current work plane. Useful for floors, walls, and reference surfaces.
