@@ -63,9 +63,9 @@ In **Width → Depth → Height** mode you can lock any of the three dimensions 
 
 Draws exactly like a **Block**, but the placed part is a real, working `Seat` (or `VehicleSeat`) — characters can sit on it in game with no extra setup. While you draw, a semi-transparent ghost character sits on the preview so you can size and position the seat against actual character proportions before committing.
 
-![Shape Seat Settings - screenshot needed](/img/placeholder.svg)
+Draw modes, preset sizes, and the rest of the panel match [Block](#shape---block). Seat adds the settings below.
 
-![Shape Seat - gif needed](/img/placeholder.svg)
+<img src="/img/shapes/seat-settings.png" alt="Shape Seat Settings" width="50%" />
 
 #### How to use
 
@@ -94,9 +94,17 @@ Who sits on the preview:
 - **My character**: your own avatar.
 - **Custom user**: any Roblox user — enter a UserId, `@name`, username, or profile URL in the **User** field.
 
+##### Animation
+
+Animation asset ID the preview character plays while sitting. Leave empty for the default Roblox sit animation.
+
 ##### Show characters on all seats
 
 While the Seat shape is active, also previews a sitting character on every `Seat` and `VehicleSeat` already in the workspace (occupied seats are skipped). Great for reviewing seat placement and spacing across a whole place at once. Preview only — the characters disappear when you switch shapes.
+
+##### Show character on selected seats
+
+Same preview, but only on seats currently selected in Studio.
 
 ### Shape - Plane
 
