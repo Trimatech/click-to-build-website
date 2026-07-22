@@ -11,6 +11,18 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.14.0
+
+- **Bezier Path: whole-curve transform gizmo** — Edit Mode gained a gizmo that moves, rotates, and scales the entire curve at once, instead of dragging points one by one. While the gizmo is active, individual point selection is paused so you can't grab an anchor by accident.
+    - **Smooth drags** — While you drag the gizmo you get instant live feedback, and the full curve rebuild happens right after the drag settles, so even long, dense curves stay responsive.
+    - **Resize handles polish** — The curve resize handles now highlight on hover and give clearer visual cues while scaling.
+- **Bezier Path: alignment fix with corner types** — The part alignment options now take effect when a corner type is set; previously the corner geometry could cancel the alignment shift out.
+- **Cleaner Edit Mode view** — The draw-phase angle indicator is now hidden while editing a shape, so it no longer lingers over the points you're working on.
+- **Seat: script-free preview rigs** — Any scripts inside the rig assets used for sitting previews are stripped before the rig enters your place, so previews never trigger script-injection permission prompts.
+- **Cutter fix: wedge cuts** — A partial-height cut of a wedge whose triangle legs are equal no longer produces a wrong full-wedge remainder; the leftover piece is now shaped correctly.
+- **GRID fix: invisible sliver parts** — GRID builds with edge-aligned geometry no longer generate degenerate, near-zero-size wedge parts far below the map.
+- **Under the hood** — The Shape Builder was rebuilt from one monolithic class into a dedicated builder per shape, making every shape easier to maintain and extend safely. An automated cloud test suite now runs the plugin's tests inside real Roblox servers on every change. Shared UI packages were updated to their latest versions.
+
 ## 1.13.0
 
 - **New Seat shape** — Draw it exactly like a Block, get a real working `Seat` part. Sits right next to Block in the shape grid and supports all the Block draw modes and preset sizes. See [Shape Builder — Seat](/docs/shape-builder#shape---seat).
