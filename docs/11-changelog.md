@@ -11,6 +11,15 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.15.0
+
+- **New Pipe shape** — Click a path and get a real pipe: every run is built as a cylinder, with no template to prepare. Pipes, cables, handrails, tubes and conduit in one tool.
+    - **Sphere joints at every bend** — Bends are sealed with a sphere, so an elbow reads as one continuous pipe instead of two tubes crossing.
+    - **Two settings, that's it** — Diameter, plus an optional **Round ends** that domes each open end into a cable, handrail or rod. Corner handling and spacing are fixed to the one combination that makes a pipe look like a pipe, so there is nothing to get wrong.
+    - **Part templates lend their look** — Pick a Part to copy its colour, material and decals; the pipe always keeps its round shape.
+    - **Draws like Line** — Point placement, Edit Mode and loop closing are identical, and Pipe's diameter is stored separately so it never disturbs your Line setup.
+- **Line: round runs get proper corners** — Building a Line from a copied cylinder Part now shapes its turns for the round cross-section: the Round corner drops a sphere, and the Curve corner sweeps a smooth elbow out of short cylinders instead of a flat band — vertical bends (a wall-to-floor drop) included.
+
 ## 1.14.0
 
 - **Bezier Path: whole-curve transform gizmo** — Edit Mode gained a gizmo that moves, rotates, and scales the entire curve at once, instead of dragging points one by one. While the gizmo is active, individual point selection is paused so you can't grab an anchor by accident.

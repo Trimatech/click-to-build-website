@@ -801,6 +801,36 @@ Enable **Edit Mode** (Shift+G) to adjust a placed line after the fact — on bot
 
 Closing the loop with **Space** while drawing automatically drops you into Edit Mode.
 
+### Shape - Pipe
+
+Draws exactly like a **Line**, but every run is a **cylinder** instead of a box — pipes, cables, handrails, tubes, and conduit, with no template to prepare. Every bend is sealed with a sphere, so an elbow reads as a real pipe rather than two tubes crossing.
+
+Point placement, Edit Mode, loop closing, and the grid/work-plane behaviour all match [Line](#shape---line).
+
+<img src="/img/shapes/pipe-settings.png" alt="Shape Pipe Settings" width="50%" />
+
+#### How to use
+
+1. Select the **Pipe** shape from the shape selector (next to Line).
+2. Click to place points. A cylinder is drawn between each pair of consecutive points, updating live as you move the mouse.
+3. Set the **Diameter** while placing — the whole pipe updates, not just new runs.
+4. Press **Space** to close the loop, or click **Finish Building** to end an open run.
+
+#### Pipe Settings
+
+- **Diameter**: Thickness of the pipe, across both axes — runs stay perfectly round, and the joint spheres match.
+- **Round ends** (off by default): Caps each open end with a sphere, turning the pipe into a cable, handrail or rod. The cap sits *on* the end point, so the run reaches half a diameter past it — leave it off to butt a pipe flush against a wall, and note that a closed loop has no open ends to cap.
+
+That is the whole panel. Pipe is deliberately a near-one-knob shape: the corner alignment, corner type and spacing that [Line](#shape---line) exposes are fixed here to the one combination that makes a pipe look like a pipe — runs meeting at each point, sealed with a sphere, no gaps. If you need to vary any of those, build it with **Line** instead.
+
+#### Templates
+
+Pick a Part in **Template Settings** to copy its colour, material and decals onto the pipe. The pipe always keeps its round shape — a Part template is a look donor only, and Model templates aren't used by this shape (use [Line](#shape---line) for those).
+
+:::tip
+Line can build round runs too: set a cylinder Part as its template and turn on **Copy shape**. You then get every Line corner type on a round cross-section, including the **Curve** swept elbow.
+:::
+
 ### Shape - Stamp
 
 A stack-on-face tool: hover any part's face and click to create a new part that matches that face's footprint, extruded outward along the face normal. Perfect for quickly building up greebles, ledges, caps, and stacked details without measuring.
