@@ -167,8 +167,8 @@ What gets copied to the new Shape (when a template is set):
 #### Other settings
 
 - Grid Size: Spacing used for grid snapping.
-- Quick Grid: One‑tap presets 10, 5, 1, and the minimum size. The preset row can be pinned into the viewport PINNED bar.
-- Snap to part: Snap points to nearby part vertices/edges.
+- Quick Grid: One‑tap grid size presets. Two systems ship with the plugin — **Halving** (16 → 0.1, every step half the one above) and **Round numbers** (10, 5, 1, 0.5, 0.2, 0.1) — and you can save your own set beside them and switch between them in one click. The preset row can be pinned into the viewport PINNED bar.
+- Snap to part: Snap points to nearby part vertices/edges. This also works in the constrained defining steps — while dragging a height, depth, or top size, snap points from nearby parts are projected onto the axis you are defining, so you can match an existing part's height without measuring it.
 - Align grid to current edge: Rotate and position the grid to the current edge on the work surface.
 
     ![Grid Mode — Align to edge](/img/common/grid-align-current-edge.gif)
@@ -247,6 +247,7 @@ What gets copied to the new Shape (when a template is set):
 
   ![Angle indicator - gif needed](/img/placeholder.svg)
 
+- Show spacing UI: Measure the shape you are drawing against the last one you built, square to its nearest face — so a row of fence posts reads its own spacing as you place it, with nothing to count. A thin line is drawn across the space between the two with the clear gap written on it in studs, and nothing else. It follows the cursor before the first click, then the shape you are drawing, and it measures out of the last build's own faces however that build is turned.
 - Show coordinates UI: Display point coordinates (X, Y, Z values) while placing.
 - Output Type: Decide whether generated geometry is grouped into a `Folder` or `Model`.
 - Output To: Route results to `Workspace` (default) or the first selected folder/model in the Explorer. If you select a part, the plugin climbs up the hierarchy until it finds a folder/model; if nothing valid is selected it safely falls back to `Workspace`.

@@ -34,7 +34,7 @@ Generate repeated or patterned structures like walls, fences, posts, or grids fr
 
 ## Panels 🎛️
 
-### Corner Settings ➰
+### Corner Settings ➰ {#corner-settings}
 
 ![Structure Corner Settings](/img/structure/structure-settings.png)
 

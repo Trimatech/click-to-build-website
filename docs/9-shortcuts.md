@@ -4,6 +4,7 @@ title: Keyboard Shortcuts
 ---
 
 -   Cancel building: Esc
+-   Pause / resume building: Shift+P (keeps your points, hands the mouse back to Studio)
 -   Start/Stop Structure Builder: Shift+F
 -   Start/Stop Model Placer: Shift+R
 -   Start/Stop Shape Builder: Shift+T
