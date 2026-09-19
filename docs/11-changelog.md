@@ -11,6 +11,10 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.16.1
+
+- **Fix: MouseLeave capability warning** — Hovering a control inside a scrolling panel printed `The current thread cannot connect 'MouseLeave' (lacking capability RobloxScript)` with a stack trace on every hover. The shared UI library connected to a dock-window event that only Roblox's own scripts may use. Updated to `@rbxts-ui/components` 13.4.1, which drops that connection; hover release is covered by the frame's own MouseLeave, window focus loss and the existing per-frame bounds check.
+
 ## 1.16.0
 
 The biggest release yet: a family of six finishing tools for geometry you have already built, four new shapes, and placement upgrades across most of the catalogue.
