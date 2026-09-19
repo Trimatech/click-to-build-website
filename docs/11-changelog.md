@@ -7,13 +7,18 @@ This page lists notable changes across releases. Use it to track new features, i
 
 ## Unreleased 🧪
 
-- **Mesh results (EditableMesh)** — Turn builds into a single MeshPart instead of a pile of parts. Part colors are kept; blocks, wedges, corner wedges, cylinders, balls and existing MeshParts are meshed, while unions and trusses stay as parts.
-    - **Mesh (Applied on finish)** — New Finalization setting for Shape Builder and Structure Builder. Every finished build becomes one mesh (overrides Union).
-    - **New Mesh tool** — In the Tools grid. Select parts, models or folders (built with the plugin or not) and press **Convert to Mesh**. The panel shows how many parts will merge and which stay as parts. The tool doesn't take over the mouse, so you keep selecting in Studio as usual.
-    - **Upload to Roblox** — Mesh results only exist in your Studio session until uploaded. Press **Upload to Roblox** next to Convert (it appears whenever the selection holds meshes that aren't uploaded yet), or turn on **Upload mesh to Roblox automatically**. The part switches to the uploaded asset in place and keeps its size, properties and children; the panel lists the new asset ids. The button also appears for Katana, Laser and Bezier sweep-cut results.
-    - **Curve Segments** — Controls how round cylinders and balls come out (Roblox allows 20,000 triangles per mesh).
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
+
+## 1.17.0
+
+- **Mesh results (EditableMesh).** Turn a build into one MeshPart instead of a pile of parts. Part colors carry over. Blocks, wedges, corner wedges, cylinders, balls and existing MeshParts go into the mesh; unions and trusses stay as parts.
+    - **Finish as Parts, Union or Mesh.** Shape Builder and Structure Builder now have one "Finish as" choice in Finalization, replacing the separate Union and Mesh checkboxes. Your old Union setting carries over.
+    - **Triangle count while you build.** With Finish as Mesh, a box in the viewport shows how many triangles the mesh will have out of the 20,000 Roblox allows, and warns you as you get close. If a build goes over, finishing keeps the parts and tells you why.
+    - **Only the outside gets meshed.** Faces buried inside other parts, or pressed flat against a neighbour, are dropped before the mesh is built. So are faces no ray from outside can reach, like the inside of a sealed box. A wall of touching blocks comes out as its outer shell.
+    - **New Mesh tool.** In the Tools grid. Select parts, models or folders (built with the plugin or not) and press **Convert to Mesh**. The panel shows how many parts will merge and which stay as parts. The tool doesn't take over the mouse, so you keep selecting in Studio as usual.
+    - **Upload to Roblox.** A mesh result only exists in your Studio session until you upload it. Press **Upload to Roblox** next to Convert (it appears whenever the selection holds meshes that aren't uploaded yet), or turn on **Upload mesh to Roblox automatically**. The part switches to the uploaded asset in place and keeps its size, properties and children, and the panel lists the new asset ids. The button also appears for Katana, Laser and Bezier sweep-cut results.
+    - **Curve Segments.** Sets how round cylinders and balls come out. More segments means more triangles.
 
 ## 1.16.1
 
