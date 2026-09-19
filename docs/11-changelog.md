@@ -7,7 +7,11 @@ This page lists notable changes across releases. Use it to track new features, i
 
 ## Unreleased 🧪
 
-- EditableMesh as a result from Shape Builder and Puncher
+- **Mesh results (EditableMesh)** — Turn builds into a single MeshPart instead of a pile of parts. Part colors are kept; blocks, wedges, corner wedges, cylinders, balls and existing MeshParts are meshed, while unions and trusses stay as parts.
+    - **Mesh (Applied on finish)** — New Finalization setting for Shape Builder and Structure Builder. Every finished build becomes one mesh (overrides Union).
+    - **New Mesh tool** — In the Tools grid. Select parts, models or folders (built with the plugin or not) and press **Convert to Mesh**. The panel shows how many parts will merge and which stay as parts. The tool doesn't take over the mouse, so you keep selecting in Studio as usual.
+    - **Upload to Roblox** — Mesh results only exist in your Studio session until uploaded. Press **Upload to Roblox** next to Convert (it appears whenever the selection holds meshes that aren't uploaded yet), or turn on **Upload mesh to Roblox automatically**. The part switches to the uploaded asset in place and keeps its size, properties and children; the panel lists the new asset ids. The button also appears for Katana, Laser and Bezier sweep-cut results.
+    - **Curve Segments** — Controls how round cylinders and balls come out (Roblox allows 20,000 triangles per mesh).
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
