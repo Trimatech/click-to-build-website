@@ -19,7 +19,7 @@ Clicking a tool in the grid selects it **and starts it immediately**; clicking t
 - **Smoother**: drag a curve into the crease where two parts meet — a wall on a floor, a step against its riser.
 - **Fill**: hover a hole and click to build the part that belongs in it, measured from the parts around it.
 - **Splitter**: point at a part and click to cut it into two plain parts, exactly where you are looking.
-- **PrimaryPart**: generate a bounding-box PrimaryPart for each selected model.
+- **Bounds**: generate a bounding-box PrimaryPart for each selected model.
 - **Replacer**: hover anything with a template picked and click to swap it out, keeping where it stood.
 
 Pinned tools use the same active/inactive state as the Tools dock. Click a pinned tool once to start it; click the active pinned tool again to stop.
@@ -232,9 +232,9 @@ Decals, attachments, welds and stud surfaces are carried over to the new axes, s
 - **Apply to whole selection**: one click reorients every selected part the same way, described in each part's own axes — click the top of one fence post to say "the top is the forward" and all the selected posts turn their own tops forwards, even ones standing at different angles.
 - **Mark selected parts**: show the blue face patch and arrow on every selected part (up to 24), so you can see which way a whole group faces at a glance.
 
-## PrimaryPart
+## Bounds
 
-Select one or more models in Explorer, choose **PrimaryPart** in the Tools dock, then press **Generate**. Each selected model gets an invisible part fitted to its contents and assigned as its PrimaryPart. Nested parts count toward the bounds, but nested models only receive their own PrimaryPart if you select them too. Studio selection stays available while the panel is open.
+Select one or more models in Explorer, choose **Bounds** in the Tools dock, then press **Generate**. Each selected model gets an invisible part fitted to its contents and assigned as its PrimaryPart. Nested parts count toward the bounds, but nested models only receive their own PrimaryPart if you select them too. Studio selection stays available while the panel is open.
 
 | Setting | When to use it |
 | --- | --- |
