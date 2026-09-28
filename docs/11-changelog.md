@@ -10,6 +10,12 @@ This page lists notable changes across releases. Use it to track new features, i
 - Shape Builder: Adding of arched corner (half-arch corner)
 - **Shape Builder: Edit Mode for Shapes** (In Progress): Add edit mode functionality for shapes (Rectangle, QuadBox, Roundbox, PillBox, Pyramid, Platform, Wedge, CornerWedge, Plane, TriangleFrom4Points) similar to Polygon/Bezier. Points should be constrained to their defining mode: depth points only move in depth direction, height points only move along work plane Y axis, width points move freely on work plane. When entering edit mode during point definition, mouse position should be added to points array.
 
+## 1.18.1
+
+- New [Puncher](/docs/tools#puncher): draw holes, choose depth and selection scope, and set a part limit with cutting progress.
+- New [Uploader](/docs/tools#uploader): find and upload pending meshes across the place before saving or publishing.
+- Refined Bounds, Puncher and Uploader icons with matching illustrations and more padding.
+
 ## 1.17.0
 
 - **Mesh results (EditableMesh).** Turn a build into one MeshPart instead of a pile of parts. Part colors carry over. Blocks, wedges, corner wedges, cylinders, balls and existing MeshParts go into the mesh; unions and trusses stay as parts.

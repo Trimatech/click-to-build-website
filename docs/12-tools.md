@@ -21,6 +21,8 @@ Clicking a tool in the grid selects it **and starts it immediately**; clicking t
 - **Splitter**: point at a part and click to cut it into two plain parts, exactly where you are looking.
 - **Bounds**: generate a bounding-box PrimaryPart for each selected model.
 - **Replacer**: hover anything with a template picked and click to swap it out, keeping where it stood.
+- **Puncher**: draw a rectangle, triangle or polygon over the viewport to cut a hole through the parts behind it.
+- **Uploader**: find and upload meshes across the place that only exist in the current Studio session.
 
 Pinned tools use the same active/inactive state as the Tools dock. Click a pinned tool once to start it; click the active pinned tool again to stop.
 
@@ -42,16 +44,13 @@ Use Nudger when two coplanar parts flicker from z-fighting, or when a part needs
 - **Step (studs)**: Amount applied per click. Use tiny values like `0.001` for z-fighting fixes, or larger values for coarse alignment.
 - **Quick step**: One-tap common step sizes from `1` down to `0.0001`.
 
-:::warning Mesh parts must be saved to Roblox manually
+:::warning Upload mesh results before saving or publishing
 
-Katana and Laser use `GeometryService` (`SweepPartAsync`, `SubtractAsync`, and similar). The results are often **MeshPart** instances or mesh-backed **UnionOperation** parts.
+Cutting and meshing can create geometry that only exists in the current Studio session. Saving the place does not upload those meshes.
 
-Those meshes live in your open place in Studio, but Roblox does **not** upload them as assets automatically. Before you publish or hand off the place:
+Use **Upload to Roblox** beside the tool's actions, or open [Uploader](#uploader) to find and upload pending MeshParts across the place. Save the place again after uploading.
 
-1. Select each cut result (or the parent model).
-2. Save or publish the mesh to Roblox from Studio (for example **Save to Roblox** / mesh export via the properties or Asset Manager workflow you normally use for CSG output).
-
-If you skip this step, geometry can look fine in Studio but fail to load or appear broken for players in a published experience.
+Uploader handles pending MeshParts. Save union results through Studio's own asset workflow.
 
 :::
 
@@ -72,6 +71,25 @@ Cut existing parts with either a straight screen slash (Katana) or a freehand tr
 - **Depth (studs) / Depth (layers)**: How deep the cut goes — either a fixed stud depth or a number of camera-facing part layers.
 - **Cut Layers (0 = all touched)**: In layer mode, limit how many touched parts are cut. Use `0` to cut everything the stroke touches.
 - **Recolor cut pieces**: Tint separated pieces for easier inspection.
+
+## Puncher
+
+Draw over the viewport to cut a hole through the parts behind the shape. Drag a **Rectangle**, click three corners for a **Triangle**, or click **Polygon** corners and finish by clicking the first corner again or pressing Enter. Backspace removes the last polygon corner; Esc cancels.
+
+| Setting | What it does |
+| --- | --- |
+| Hole | **As seen** matches your drawing at every depth, widening with distance. **Straight** keeps the opening's size at the first surface. Unions use a straight cut in either mode. |
+| Depth | **Nearest parts** cuts through the chosen number of parts. **Everything** reaches up to 1000 studs past the first surface. **Studs deep** stops at the chosen depth to make a pocket. |
+| Max parts | Limits **Everything** and **Studs deep** cuts, nearest first. Defaults to 256; adjustable from 1 to 1000. Larger cuts take longer, with progress shown in the viewport. |
+| Only the selection | Cuts selected parts and parts inside selected models or folders. Unselected geometry is ignored, even when it is in front. |
+
+Locked parts are skipped. Cut parts become MeshParts that you can punch again; unions stay unions. Upload mesh results before saving or publishing.
+
+## Uploader
+
+Open **Uploader** to scan the place for MeshParts whose geometry has not been uploaded. Click a listed row to select its meshes and focus the camera on them. Press **Rescan place** after creating more meshes, then use the upload button to save all pending meshes found by the scan.
+
+Uploads replace the temporary mesh data in place, preserving the part's size, properties and children. The panel shows progress and any upload error. Save the place again after uploading. The scan includes stored meshes outside Workspace and skips temporary previews and objects excluded from saving.
 
 ## Resizer
 
